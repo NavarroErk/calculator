@@ -4,7 +4,97 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Calculator</title>
   </head>
-  <body></body>
+  <body>
+    <div id="calcBody1">
+      <div id="calcBody2">
+        <div id="calcBody3">
+          <div id="calcBody4">
+            <div id="statusbar">
+              <p></p>
+            </div>
+            <div id="displayTextDiv">
+              <p id="displayOne"></p>
+              <p id="displayTwo"></p>
+            </div>
+            <div id="calcBtnsDiv">
+              <button class="calcBtn lightBtn" id="clearBtn">AC</button>
+              <button class="calcBtn lightBtn" id="negativeBtn">+/-</button>
+              <button class="calcBtn lightBtn" id="percentBtn">%</button>
+              <button
+                class="operatorBtn calcBtn orangeBtn"
+                id="divideBtn"
+                value="/"
+              >
+                ÷
+              </button>
+
+              <button class="calcBtn darkBtn numBtn" id="sevenBtn" value="7">
+                7
+              </button>
+              <button class="calcBtn darkBtn numBtn" id="eightBtn" value="8">
+                8
+              </button>
+              <button class="calcBtn darkBtn numBtn" id="nineBtn" value="9">
+                9
+              </button>
+              <button
+                class="operatorBtn calcBtn orangeBtn"
+                id="multiplyBtn"
+                value="*"
+              >
+                X
+              </button>
+
+              <button class="calcBtn darkBtn numBtn" id="fourBtn" value="4">
+                4
+              </button>
+              <button class="calcBtn darkBtn numBtn" id="fiveBtn" value="5">
+                5
+              </button>
+              <button class="calcBtn darkBtn numBtn" id="sixBtn" value="6">
+                6
+              </button>
+              <button
+                class="operatorBtn calcBtn orangeBtn"
+                id="subtractBtn"
+                value="-"
+              >
+                -
+              </button>
+
+              <button class="calcBtn darkBtn numBtn" id="oneBtn" value="1">
+                1
+              </button>
+              <button class="calcBtn darkBtn numBtn" id="twoBtn" value="2">
+                2
+              </button>
+              <button class="calcBtn darkBtn numBtn" id="threeBtn" value="3">
+                3
+              </button>
+              <button
+                class="operatorBtn calcBtn orangeBtn"
+                id="addBtn opActiveBtn"
+                value="+"
+              >
+                +
+              </button>
+
+              <button class="calcBtn darkBtn numBtn" id="zeroBtn" value="0">
+                0
+              </button>
+              <button class="calcBtn darkBtn numBtn" id="decimalBtn" value=".">
+                .
+              </button>
+              <button class="calcBtn orangeBtn" id="equalsBtn">=</button>
+              <div id="sliderDiv"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="structure.js"></script>
+  </body>
 </html>

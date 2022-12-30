@@ -1,0 +1,147 @@
+body{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+}
+#calcBody1{
+    background-color: rgb(88, 102, 117);
+    padding: 1.5px;
+    border-radius: 40px;
+}
+#calcBody2{
+    background-color: rgb(206, 212, 218);
+    padding: 1px;
+    border-radius: 40px;
+}
+#calcBody3{
+    background-color: rgb(90, 109, 129);
+    padding: 2px;
+    border-radius: 40px;
+}
+#calcBody4{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 285px;
+    height: 575px;
+    border: 5px solid black;
+    border-radius: 40px;
+    background-color: black;
+}
+#statusbar{
+    height: 10px;
+    width: 250px;
+    border: 2px solid white;
+    color: white;
+}
+#displayTextDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    top: 70px;
+    height: 40px;
+    width: 260px;
+}
+#displayOne{
+    background-color: black;
+    color: white;
+    width: 250px;
+    height: 55px;
+    position: absolute;
+    left: 15px;
+    font-size: 40pt;
+    font-family: Arial, Helvetica, sans-serif;
+    direction: rtl;
+    /* border: 2px solid white; */
+}
+#displayTwo{
+    color: rgb(187, 187, 187);
+    font-size: 20pt;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 250px;
+    height: 35px;
+    position: relative;
+    left: 12px;
+    bottom: 10px;
+    direction: rtl;
+    /* border: 2px solid white; */
+}
+/* #region btnsdiv */
+#calcBtnsDiv{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 145px;
+}
+.calcBtn{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 5px;
+    font-size: 20pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#sliderDiv{
+    height: 5px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: rgb(180, 172, 182);
+    position: relative;
+    top: 25px;
+}
+
+/* #region individualBtn */
+#negativeBtn{
+    font-size: 18pt;
+}
+#divideBtn{
+    font-size: 28pt;
+}
+#multiplyBtn{
+    font-size: 16pt;
+}
+#subtractBtn{
+    font-size: 32pt;
+}
+#zeroBtn{
+    width: 130px;
+    border-radius: 40px
+}
+#opActiveBtn{
+    background-color: white;
+    color: rgb(246, 153, 6);
+}
+/* #endregion individualBtn */
+/* #region colorBtns */
+.orangeBtn{
+    background-color: rgb(254, 149, 4);
+    color: white;
+}
+#equalsBtn{
+    transition: 0.5s ease-in-out;
+}
+#equalsBtn:active{
+    background-color: rgb(249, 188, 89);
+    transition: none;
+}
+.lightBtn{
+    background-color: rgb(160, 160, 160);
+    transition: background-color 0.5s ease-in-out;
+}
+.lightBtn:active{
+    background-color: rgb(232, 224, 235);
+    transition: none;
+}
+.darkBtn{
+    background-color: rgb(49, 49, 49);
+    color: white;
+    transition: background-color 0.5s ease-in-out;
+}
+.darkBtn:active{
+    background-color: rgb(108, 105, 113);
+    transition: none ;
+}
+/* #endregion colorBtns */
+/* #endregion btnsdiv */
