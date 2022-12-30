@@ -4,6 +4,7 @@ body{
     position: relative;
     top: 20px;
 }
+/* #region calcBody */
 #calcBody1{
     background-color: rgb(88, 102, 117);
     padding: 1.5px;
@@ -29,12 +30,38 @@ body{
     border-radius: 40px;
     background-color: black;
 }
+/* #endregion calcBody */
+/* #region statusbar */
 #statusbar{
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 10px;
     height: 10px;
     width: 250px;
-    border: 2px solid white;
     color: white;
 }
+#timeDiv{
+    font-size: 10pt;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+}
+#camImg{
+    position: relative;
+    right: 30px;
+    bottom: 5px;
+}
+#batteryImg{
+    position: relative;
+    top: 2px;
+}
+.iconImg{
+    height: 12px;
+}
+/* #endregion statusbar */
+/* #region display */
 #displayTextDiv{
     display: flex;
     flex-direction: row;
@@ -54,7 +81,6 @@ body{
     font-size: 40pt;
     font-family: Arial, Helvetica, sans-serif;
     direction: rtl;
-    /* border: 2px solid white; */
 }
 #displayTwo{
     color: rgb(187, 187, 187);
@@ -66,14 +92,14 @@ body{
     left: 12px;
     bottom: 10px;
     direction: rtl;
-    /* border: 2px solid white; */
 }
+/* #endregion display */
 /* #region btnsdiv */
 #calcBtnsDiv{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 145px;
+    margin-top: 140px;
 }
 .calcBtn{
     width: 60px;
@@ -84,17 +110,21 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 #sliderDiv{
-    height: 5px;
-    width: 100px;
+    height: 4px;
+    width: 110px;
     border-radius: 20px;
-    background-color: rgb(180, 172, 182);
+    background-color: rgb(237, 234, 238);
     position: relative;
-    top: 25px;
+    top: 20px;
 }
 
 /* #region individualBtn */
 #negativeBtn{
     font-size: 18pt;
+}
+#negativeBtn:disabled{
+    background-color: rgb(160, 160, 160);
+    color: black;
 }
 #divideBtn{
     font-size: 28pt;
@@ -107,7 +137,9 @@ body{
 }
 #zeroBtn{
     width: 130px;
-    border-radius: 40px
+    border-radius: 40px;
+    text-align:left;
+    padding-left: 20px;
 }
 #opActiveBtn{
     background-color: white;

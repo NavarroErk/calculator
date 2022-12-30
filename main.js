@@ -1,4 +1,3 @@
-// create functions for add/subtract/multiply/divide
 let result
 let currentNum = ""
 let previousNum = ""
@@ -6,8 +5,13 @@ let op
 let displayOne = document.querySelector("#displayOne")
 let displayTwo = document.querySelector("#displayTwo")
 let clear = document.querySelector("#clearBtn")
-let equals = document.querySelector("#equalsBtn")
-let body = document.querySelector("body")
+
+
+let time = new Date().getHours() + ":" + new Date().getMinutes()
+let statusbarTime = document.querySelector("#timeDiv")
+    statusbarTime.textContent = time;
+
+    
 
 let decimal = document.querySelector("#decimalBtn")
 decimal.addEventListener("click", disableDecimal)
@@ -18,6 +22,10 @@ function enableDecimal() {
     decimal.disabled = false
 }
 clear.addEventListener("click", () => {
+    operatorBtns.forEach((btn) => {
+        btn.style.backgroundColor = "rgb(254, 149, 4)"
+        btn.style.color = "white"
+});
     displayOne.textContent = ""
     displayTwo.textContent = ""
     currentNum = ""
@@ -28,6 +36,7 @@ clear.addEventListener("click", () => {
 let numBtns = document.querySelectorAll(".numBtn")
 numBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
+        negativeBtn.disabled = false
         populateDisplay(e.target.value)
     })
 });
@@ -40,6 +49,16 @@ operatorBtns.forEach((btn) => {
         btn.style.color = "rgb(254, 149, 4)"
     })
 });
+
+let negativeBtn = document.querySelector("#negativeBtn")
+negativeBtn.disabled = true
+negativeBtn.addEventListener("click", () => {
+    currentNum *= -1
+    displayOne.textContent = currentNum
+})
+
+
+let equals = document.querySelector("#equalsBtn")
 function handleOperator(val) {
     op = val
     previousNum = currentNum
@@ -92,9 +111,6 @@ function divide(a, b) {
     console.log(result);
     displayOne.textContent = result
     displayTwo.textContent = ""
-    body.addEventListener("click", () => {
-        // displayOne.textContent = ""
-    })
 }
 
 function populateDisplay(val) {
@@ -103,10 +119,3 @@ function populateDisplay(val) {
     currentNum += val
     currentNum = currentNum.substring(0, 8)
 }
-
-
-
-
-// onclick of any operator button, save the first number that is input by the user, also save the operation that has been chosen
-
-
